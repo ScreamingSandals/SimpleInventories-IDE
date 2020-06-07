@@ -17,7 +17,6 @@
         <script src="assets/ace/ext-language_tools.js"></script>
 
         <script src="js/simpleinventories.js?<?php echo filemtime(__DIR__ . '/js/simpleinventories.js'); ?>"></script>
-        <script src="js/groovy-parser.js?<?php echo filemtime(__DIR__ . '/js/groovy-parser.js'); ?>"></script>
 
         <script>
             var materials = <?php echo file_get_contents(__DIR__ . "/material.json"); ?>;
@@ -164,6 +163,7 @@
                     <div id="editor">inventory {
 
 }</div>
+                    <a onclick="executeGroovy()">Execute code</a>
                 </div>
             </div>
         </div>

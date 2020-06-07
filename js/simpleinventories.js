@@ -119,3 +119,16 @@ function launchIde() {
         $('[data-link=' + (settings.render_footer_start + 8) + '] img').attr('src', materials[settings.pageForwardItem].link);
 
 }
+
+function executeGroovy() {
+    var content = btoa(editor.getValue());
+    $.ajax({
+        type: 'POST',
+        url: 'api.php?service=groovyPreProcessor',
+        data: {
+            groovyContent: content
+        }
+    }).done(function (data) {
+        console.log(data);
+    });
+}
