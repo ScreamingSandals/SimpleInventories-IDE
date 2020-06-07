@@ -1,0 +1,40 @@
+defaultTasks 'clean', 'screamCompile'
+
+allprojects {
+    group = 'org.screamingsandals.simpleinventories.ide'
+    version = '1.0.0-SNAPSHOT'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url =  "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url = 'https://repo.screamingsandals.org'
+        }
+    }
+    dependencies {
+		classpath 'org.screamingsandals.gradle.builder:screaming-plugin-builder:1.0.7'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.screamingsandals.gradle.builder'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.screamingsandals.simpleinventories.ide.Main'
+    }
+}
+
+repositories {
+
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy:3.0.3'
+}
+
+sourceCompatibility = 11
