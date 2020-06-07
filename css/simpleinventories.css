@@ -1,0 +1,46 @@
+.center {
+    text-align: center;
+}
+
+.inventorySelect {
+    display: inline-block;
+    width: 150px;
+    margin: 10px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.inventorySelect:hover {
+    transform: scale(1.1);
+}
+
+#inventory-preview td, #inventory-preview tr {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    line-height: 0;
+}
+
+#inventory-preview {
+    transform: scale(3);
+    position: relative;
+    top: 30%;
+    left: 40%;
+}
+
+#editor {
+    margin: 10px;
+    height: 90vh;
+}
+
+td[data-link] {
+    background-image:url('../images/slot.png');
+    width:18px;
+    height:18px;
+}
+
+td[data-link] img {
+    width: 16px;
+    height: 16px;
+    margin: 1px;
+}

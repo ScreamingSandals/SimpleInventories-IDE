@@ -1,0 +1,6 @@
+{
+    "require": {
+        "leon-mbs/phpquery": "^1.0",
+        "tracy/tracy": "^2.7"
+    }
+}
